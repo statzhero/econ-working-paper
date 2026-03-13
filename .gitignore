@@ -1,0 +1,6 @@
+.DS_Store
+*.pdf
+.vscode
+.claude
+.gitignore
+workflow.md
