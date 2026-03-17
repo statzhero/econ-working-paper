@@ -1,7 +1,7 @@
-// typst init @preview/ssrn-manuscript
+// typst init @preview/econ-working-paper
 // typst compile main.typ
 
-#import "@preview/ssrn-manuscript:0.1.0": *
+#import "@preview/econ-working-paper:0.3.1": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------

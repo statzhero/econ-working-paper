@@ -1,4 +1,4 @@
-// ssrn-manuscript: Working-paper template for SSRN and economics manuscripts
+// econ-working-paper: Working-paper template for SSRN and economics manuscripts
 // Copyright (c) 2026 Ulrich Atz — MIT License
 
 // save built-in before the `bibliography` parameter shadows it

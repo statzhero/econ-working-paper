@@ -1,4 +1,4 @@
-// typst init @preview/ssrn-manuscript
+// typst init @preview/econ-working-paper
 // typst compile main.typ
 
 #import "../lib.typ": *
