@@ -67,7 +67,9 @@
 
 #let render-frontmatter(
   abstract,
+  abstract-name,
   keywords,
+  keywords-name,
   jel,
   acknowledgments: none,
   abstract-width: 69%,
@@ -81,7 +83,7 @@
     box(width: abstract-width)[
       #set align(left)
       #set par(first-line-indent: 0em, leading: 0.65em, spacing: 0.65em, justify: true)
-      #align(center)[*Abstract*#if acknowledgments != none [\*]]
+      #align(center)[*#abstract-name*#if acknowledgments != none [\*]]
       #v(gap, weak: true)
       #par(justify: true, abstract)
     ]
@@ -95,7 +97,7 @@
       #set par(first-line-indent: 0em, leading: 0.65em, spacing: 0.65em, justify: true)
 
       #if keywords != none {
-        par(justify: true)[*_Keywords:_* #keywords]
+        par(justify: true)[*_#keywords-name:_* #keywords]
       }
 
       #if keywords != none and jel != none {
@@ -123,7 +125,9 @@
   authors: (),
   date: none,
   abstract: none,
+  abstract-name: "Abstract",
   keywords: none,
+  keywords-name: "Keywords",
   jel: none,
   acknowledgments: none,
   bibliography: none,
@@ -283,7 +287,7 @@
     {
       v(1.5em)
       render-frontmatter(
-        abstract, keywords, jel,
+        abstract, abstract-name, keywords, keywords-name, jel,
         acknowledgments: if anonymize { none } else { acknowledgments },
         abstract-width: cover-text-width - 15%,
         meta-width: cover-text-width,
