@@ -126,6 +126,7 @@
   keywords: none,
   jel: none,
   acknowledgments: none,
+  epigraph: none,
   bibliography: none,
   appendix: none,
   internet-appendix: none,
@@ -380,6 +381,22 @@
     v(0.8em, weak: true)
     // suppress first-line indent on the paragraph right after a heading
     h(0pt)
+  }
+
+  // -- epigraph (optional opening quotation) --------------------------------
+  if epigraph != none {
+    set par(first-line-indent: 0em, leading: 0.65em, spacing: 0.65em)
+    align(right,
+      box(width: 80%)[
+        #set align(left)
+        #emph(epigraph.quote)
+        #if "attribution" in epigraph {
+          v(4pt)
+          text(size: 0.9em)[--- #epigraph.attribution]
+        }
+      ],
+    )
+    v(1.5em)
   }
 
   doc

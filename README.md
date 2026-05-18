@@ -1,6 +1,6 @@
 # econ-working-paper
 
-[![Typst Universe](https://img.shields.io/badge/Universe-0.3.1-239dae?logo=typst)](https://typst.app/universe/package/econ-working-paper)
+[![Typst Universe](https://img.shields.io/badge/Universe-0.4.0-239dae?logo=typst)](https://typst.app/universe/package/econ-working-paper)
 ![Human in the Loop](https://img.shields.io/badge/Human%20in%20the%20Loop-blue)
 
 
@@ -29,7 +29,7 @@ typst compile main.typ
 Or copy directly into an existing document:
 
 ```typst
-#import "@preview/econ-working-paper:0.3.1": *
+#import "@preview/econ-working-paper:0.4.0": *
 
 #show: paper.with(
   title: "Your Paper Title",
@@ -41,7 +41,7 @@ Or copy directly into an existing document:
   date: "2026-01-01", // the only correct date format
   abstract: [Your abstract here.],
   keywords: [keyword one, keyword two, keyword three],
-  jel: [G14, G38],
+  // jel: [G14, G38],
   acknowledgments: [We thank ...],
   bibliography: bibliography("refs.bib", title: "References"), 
 )
@@ -85,6 +85,7 @@ A shorter alias `c` is also available: `#c(<coffee2024>)`.
 | `keywords` | `none` | Keywords content |
 | `jel` | `none` | JEL classification codes |
 | `acknowledgments` | `none` | Footnote on the Abstract heading |
+| `epigraph` | `none` | Opening quotation dict (`quote`, `attribution`) |
 | `bibliography` | `none` | Bibliography specification |
 | `appendix` | `none` | Appendix content (headings numbered A.1, A.2, ...) |
 | `internet-appendix` | `none` | Internet Appendix content (IA.1, IA.2, ...; IA-prefixed figures/tables) |
@@ -118,7 +119,7 @@ A shorter alias `c` is also available: `#c(<coffee2024>)`.
 The template file shows every parameter with its default value:
 
 ```typst
-#import "@preview/econ-working-paper:0.3.1": *
+#import "@preview/econ-working-paper:0.4.0": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------
@@ -139,8 +140,12 @@ The template file shows every parameter with its default value:
   date: "2026-01-01",              // date string shown on title page
   abstract: [Your abstract here.],
   keywords: [keyword one, keyword two],
-  jel: [G14, G38],                 // optional JEL classification codes
+  // jel: [G14, G38],               // optional JEL classification codes
   acknowledgments: [We thank ...], // footnote on the Abstract heading
+  // epigraph: (                    // optional opening quotation
+  //   quote: [Your quote here.],
+  //   attribution: [Author, _Source_],
+  // ),
 
   // -- bibliography -------------------------------------------------------
   bibliography: bibliography("refs.bib", title: "References"),

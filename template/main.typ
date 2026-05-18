@@ -1,7 +1,7 @@
 // typst init @preview/econ-working-paper
 // typst compile main.typ
 
-#import "@preview/econ-working-paper:0.3.1": *
+#import "@preview/econ-working-paper:0.4.0": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------
@@ -22,8 +22,12 @@
   date: "2026-01-01",              // date string shown on title page
   abstract: [Your abstract here.],
   keywords: [keyword one, keyword two],
-  jel: [G14, G38],                 // optional JEL classification codes
+  // jel: [G14, G38],               // optional JEL classification codes
   acknowledgments: [We thank ...], // footnote on the Abstract heading
+  // epigraph: (                    // optional opening quotation
+  //   quote: [Your quote here.],
+  //   attribution: [Author, _Source_],
+  // ),
 
   // -- bibliography -------------------------------------------------------
   bibliography: bibliography("refs.bib", title: "References"),

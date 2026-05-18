@@ -1,7 +1,7 @@
 // typst init @preview/econ-working-paper
 // typst compile main.typ
 
-#import "@preview/econ-working-paper:0.3.1": *
+#import "../lib.typ": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------
@@ -29,6 +29,10 @@
   keywords: [coffee, brewing, extraction, caffeine, pour-over],
   jel: [Q11, L66, D12],            // optional JEL classification codes
   acknowledgments: [We thank the baristas at Intelligentsia and Green Bottle for providing beans and patience. Brewster gratefully acknowledges financial support from the National Coffee Association (Grant No. DRIP-99).],
+  epigraph: (
+    quote: [Coffee is a lot more than just a drink; it's something happening.],
+    attribution: [Gertrude Stein],
+  ),
 
   // -- bibliography -------------------------------------------------------
   bibliography: bibliography("refs.bib", title: "References"),
