@@ -186,7 +186,7 @@ Your text here.
 ## Gallery
 
 ### Anonymized mode
-![Anonymized](thumbnail-anonymize.png)
+![Title page with authors, affiliations, and acknowledgments hidden for blind review](thumbnail-anonymize.png)
 
 ### Endfloat mode
 ![Manuscript with endfloat mode](thumbnail-endfloat.png)
