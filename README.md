@@ -1,6 +1,6 @@
 # econ-working-paper
 
-[![Typst Universe](https://img.shields.io/badge/Universe-0.4.0-239dae?logo=typst)](https://typst.app/universe/package/econ-working-paper)
+[![Typst Universe](https://img.shields.io/badge/Universe-0.5.0-239dae?logo=typst)](https://typst.app/universe/package/econ-working-paper)
 ![Human in the Loop](https://img.shields.io/badge/Human%20in%20the%20Loop-blue)
 
 
@@ -29,7 +29,7 @@ typst compile main.typ
 Or copy directly into an existing document:
 
 ```typst
-#import "@preview/econ-working-paper:0.4.0": *
+#import "@preview/econ-working-paper:0.5.0": *
 
 #show: paper.with(
   title: "Your Paper Title",
@@ -73,6 +73,25 @@ Your text here.
 
 This is equivalent to `\textcite` in biblatex or `\citet` in natbib.
 A shorter alias `c` is also available: `#c(<coffee2024>)`.
+
+- Use `note` (and `source`) for the explanatory line under a table or figure. It
+  renders left-aligned and single-spaced at 10pt by default. Because table
+  captions sit on top, put it at the end of the `#figure` body so it lands under
+  the table (and travels with it in endfloat mode):
+
+```typst
+#figure(
+  [
+    #include "tables/tbl-summary.typ"
+    #note[Standard errors in parentheses. #sym.star p < 0.05.]
+  ],
+  kind: table,
+  caption: [Summary statistics.],
+)
+```
+
+  Pass `size:` if your tables are not 10pt, e.g. `#note(size: 9pt)[...]`, or
+  `size: auto` to match the body font size.
 
 ## Parameters
 
@@ -119,7 +138,7 @@ A shorter alias `c` is also available: `#c(<coffee2024>)`.
 The template file shows every parameter with its default value:
 
 ```typst
-#import "@preview/econ-working-paper:0.4.0": *
+#import "@preview/econ-working-paper:0.5.0": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------

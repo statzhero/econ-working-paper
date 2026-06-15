@@ -1,7 +1,7 @@
 // typst init @preview/econ-working-paper
 // typst compile main.typ
 
-#import "@preview/econ-working-paper:0.4.0": *
+#import "@preview/econ-working-paper:0.5.0": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------

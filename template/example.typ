@@ -57,19 +57,23 @@ Our sample covers 847 cups of coffee from 12 roasteries across three continents.
 @tab-summary reports summary statistics for the main brewing variables. Pour-over and espresso methods differ on temperature and contact time but produce comparable extraction yields when properly calibrated.
 
 #figure(
-  table(
-    columns: 4,
-    align: (left, right, right, right),
-    stroke: none,
-    table.hline(stroke: 1.5pt),
-    table.header([*Variable*], [*Mean*], [*SD*], [*N*]),
-    table.hline(stroke: 0.75pt),
-    [Extraction yield (%)], [20.3], [2.1], [847],
-    [Brew temperature (°C)], [93.5], [4.8], [847],
-    [Contact time (s)], [187], [62], [847],
-    [TDS (%)], [1.35], [0.22], [847],
-    table.hline(stroke: 1.5pt),
-  ),
+  [
+    #table(
+      columns: 4,
+      align: (left, right, right, right),
+      stroke: none,
+      table.hline(stroke: 1.5pt),
+      table.header([*Variable*], [*Mean*], [*SD*], [*N*]),
+      table.hline(stroke: 0.75pt),
+      [Extraction yield (%)], [20.3], [2.1], [847],
+      [Brew temperature (°C)], [93.5], [4.8], [847],
+      [Contact time (s)], [187], [62], [847],
+      [TDS (%)], [1.35], [0.22], [847],
+      table.hline(stroke: 1.5pt),
+    )
+    #note[Sample of 847 cups across 12 roasteries. TDS denotes total dissolved solids.]
+    #source[Authors' calculations from the Global Coffee Extraction Survey (2026).]
+  ],
   caption: [Summary statistics for coffee extraction experiments.],
   kind: table,
 ) <tab-summary>

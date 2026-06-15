@@ -8,6 +8,27 @@
 #let textcite(key) = cite(key, form: "prose")
 #let c(key) = cite(key, form: "prose")
 
+// Table/figure note placed below the float at `size` (match the table body),
+// left-aligned and single-spaced. Drop one at the end of a #figure body; since
+// table captions sit on top, the note lands under the table. Set `size` to the
+// table font size if the paper renders tables at something other than 10pt, or
+// `size: auto` to inherit the surrounding text size (e.g. match body text).
+#let note(body, size: 10pt) = {
+  v(-0.4em)
+  set par(first-line-indent: 0em, leading: 0.5em, spacing: 0.5em)
+  set align(left)
+  let styled = [_Note:_ #body]
+  if size == auto { styled } else { text(size: size, styled) }
+}
+
+#let source(body, size: 10pt) = {
+  v(-0.4em)
+  set par(first-line-indent: 0em, leading: 0.5em, spacing: 0.5em)
+  set align(left)
+  let styled = [_Source:_ #body]
+  if size == auto { styled } else { text(size: size, styled) }
+}
+
 // ---------------------------------------------------------------------------
 // Helper: deduplicate affiliations and build the author line
 // ---------------------------------------------------------------------------
