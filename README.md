@@ -63,6 +63,7 @@ Your text here.
 
 - Superscript author affiliations, deduplicated automatically
 - Table captions on top, figure captions on bottom
+- `note` and `source` helpers for explanatory lines under tables and figures
 - Black hyperlinks for unintrusive print
 - Use `textcite` for in-text citations where the author name is part of the sentence:
 
