@@ -138,6 +138,7 @@
   // typography
   font: ("Linux Libertine", "Times New Roman", "New Computer Modern"),
   fontsize: 12pt,
+  table-fontsize: 10pt,
   // metadata
   title: none,
   subtitle: none,
@@ -223,6 +224,8 @@
   // -- figures and tables -----------------------------------------------
   // table captions on top, figure captions on bottom
   show figure.where(kind: table): set figure.caption(position: top)
+  // table bodies at table-fontsize; captions and #note[] keep their size
+  show table: set text(size: table-fontsize)
 
   // bold "Figure 1." / "Table 1." caption format, left-aligned, single-spaced
   show figure.caption: it => {

@@ -1,7 +1,7 @@
 // typst init @preview/econ-working-paper
 // typst compile main.typ
 
-#import "@preview/econ-working-paper:0.5.0": *
+#import "@preview/econ-working-paper:0.5.1": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------
@@ -36,6 +36,7 @@
   // -- typography ---------------------------------------------------------
   font: ("Linux Libertine", "Times New Roman", "New Computer Modern"),
   fontsize: 12pt,                   // body text size
+  table-fontsize: 10pt,             // table body text size
 
   // -- layout -------------------------------------------------------------
   paper: "us-letter",               // "us-letter" or "a4"

@@ -1,6 +1,6 @@
 # econ-working-paper
 
-[![Typst Universe](https://img.shields.io/badge/Universe-0.5.0-239dae?logo=typst)](https://typst.app/universe/package/econ-working-paper)
+[![Typst Universe](https://img.shields.io/badge/Universe-0.5.1-239dae?logo=typst)](https://typst.app/universe/package/econ-working-paper)
 ![Human in the Loop](https://img.shields.io/badge/Human%20in%20the%20Loop-blue)
 
 
@@ -29,7 +29,7 @@ typst compile main.typ
 Or copy directly into an existing document:
 
 ```typst
-#import "@preview/econ-working-paper:0.5.0": *
+#import "@preview/econ-working-paper:0.5.1": *
 
 #show: paper.with(
   title: "Your Paper Title",
@@ -91,7 +91,8 @@ A shorter alias `c` is also available: `#c(<coffee2024>)`.
 )
 ```
 
-  Pass `size:` if your tables are not 10pt, e.g. `#note(size: 9pt)[...]`, or
+  The 10pt default matches the `table-fontsize` default. If you change
+  `table-fontsize`, pass a matching `size:` (e.g. `#note(size: 9pt)[...]`), or
   `size: auto` to match the body font size.
 
 ## Parameters
@@ -121,6 +122,7 @@ A shorter alias `c` is also available: `#c(<coffee2024>)`.
 |---|---|---|
 | `font` | `("Linux Libertine", "Times New Roman", "New Computer Modern")` | Serif font fallback chain |
 | `fontsize` | `12pt` | Body text size |
+| `table-fontsize` | `10pt` | Table body text size |
 | `subtitle` | `none` | Subtitle (e.g., "WORK IN PROGRESS") |
 | `margin` | `1in` | Page margins |
 | `paper` | `"us-letter"` | `"us-letter"` or `"a4"` |
@@ -139,7 +141,7 @@ A shorter alias `c` is also available: `#c(<coffee2024>)`.
 The template file shows every parameter with its default value:
 
 ```typst
-#import "@preview/econ-working-paper:0.5.0": *
+#import "@preview/econ-working-paper:0.5.1": *
 
 #show: paper.with(
   // -- metadata -----------------------------------------------------------
@@ -178,6 +180,7 @@ The template file shows every parameter with its default value:
   // -- typography ---------------------------------------------------------
   font: ("Linux Libertine", "Times New Roman", "New Computer Modern"),
   fontsize: 12pt,                   // body text size
+  table-fontsize: 10pt,             // table body text size
 
   // -- layout -------------------------------------------------------------
   margin: 1in,                      // page margins (default: 1in)
